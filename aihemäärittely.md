@@ -1,4 +1,3 @@
-
 Aihe: Perinteinen ristinolla peli. Pelaaja pystyy valitsemaan laudan koon, voittoon vaadittavien peräkkäisten kuvioiden määrän.
 
 Käyttäjät: 1 tai 2 pelaajaa
