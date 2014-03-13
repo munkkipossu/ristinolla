@@ -1,4 +1,0 @@
-ristinolla
-==========
-
-Javan harjoitustyö
