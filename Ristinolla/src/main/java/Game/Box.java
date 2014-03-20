@@ -22,7 +22,7 @@ public class Box {
 
     public boolean clickBox(){
         if(this.clicked == false){
-            this.clicked =true;
+            this.clicked = true;
             // change symbol to what is given in the method parameters
             return true;
         }

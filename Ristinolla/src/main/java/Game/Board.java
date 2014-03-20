@@ -25,6 +25,13 @@ public class Board {
         this.boardWidth = x;
         this.boardHeigth = y;
         this.board = new Box[x][y];
+        for(int i=0; i<x; i++){
+            for(int j=0; j<y; j++){
+                this.board[i][j]=new Box();
+            }
+        }
+        
+        
     }
     
     public Box getBox(int x, int y){

@@ -17,11 +17,9 @@ import static org.junit.Assert.*;
  *
  * @author tolaakso
  */
-public class BoardTest {
+public class BoxTest {
     
-    Board board;
-    int width;
-    int heigth;
+    Box box;
     
     @BeforeClass
     public static void setUpClass() {
@@ -39,26 +37,17 @@ public class BoardTest {
     public void tearDown() {
     }
 
+    
     @Test
-    public void checkBoardWidth() {
-        width = 5;
-        heigth = 7;
-        board = new Board(width, heigth);
-        assertTrue(board.getWidth()==width);
+    public void clickingBoxOnceIsTrue() {
+        box = new Box();
+        assertTrue(box.clickBox());
     }
     
-        @Test
-    public void checkBoardHeigth() {
-        width = 5;
-        heigth = 7;
-        board = new Board(width, heigth);
-        assertTrue(board.getHeigth()==heigth);
-    }
-    /*
     @Test
-    public void checkBoxClickingOnceTrue(){
-        board = new Board(5,5);
-        assertTrue(this.board.getBox(3,5).clickBox());
+    public void clickingBoxTwicIsFalse() {
+        box = new Box();
+        box.clickBox();
+        assertFalse(box.clickBox());
     }
-    */
 }
