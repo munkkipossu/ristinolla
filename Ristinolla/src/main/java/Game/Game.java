@@ -40,4 +40,12 @@ public class Game {
         return this.board.getBox(x,y).clickBox();
     }
     
+    public String getFirstPlayerName(){
+        return this.player1.getName();
+    }
+    
+        public String getSecondPlayerName(){
+        return this.player2.getName();
+    }
+    
 }

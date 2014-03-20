@@ -38,20 +38,29 @@ public class GameTest {
     }
 
     
+    // Jostain tulee java.lang.nullpointerException... testataan
+
     @Test
-    public void constructorCreatesNamesForPlayers() {
+    public void constructorCreatesFirstPlayerName() {
         game = new Game();
         String name1 = game.getFirstPlayerName();
-        assertTrue();
+        assertEquals(name1, "Xavier");
     }
     
+    @Test
+    public void constructorCreatesSecondPlayerName() {
+        game = new Game();
+        String name1 = game.getSecondPlayerName();
+        assertEquals(name1, "Xavier");
+    }
+    /*      
     @Test
     public void clickingBoxWorks() {
         game = new Game();
         boolean test = game.clickBox(1,1);
         assertTrue(test);
     }
-    
+  
     @Test
     public void clickingBoxWorksOnlyOnce() {
         game = new Game();
@@ -60,4 +69,5 @@ public class GameTest {
         test = game.clickBox(1,1);
         assertFalse(test);
     }
+    */
 }

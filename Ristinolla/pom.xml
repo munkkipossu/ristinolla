@@ -54,12 +54,10 @@
     <version>0.30</version>
     <configuration>
         <targetClasses>
-            <param>ristinolla.logiikka.*</param>
-            <param>ristinolla.tekoaly.*</param>
+            <param>Game.*</param>
         </targetClasses>
         <targetTests>
-            <param>ristinolla.logiikka.*</param>
-            <param>ristinolla.tekoaly.*</param>
+            <param>Game.*</param>
         </targetTests>
     </configuration>
 </plugin>
