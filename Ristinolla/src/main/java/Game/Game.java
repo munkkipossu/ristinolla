@@ -36,8 +36,8 @@ public class Game {
         return false;        
     }
     
-    public void clickBox(int x, int y){
-        this.board.getBox(x,y).clickBox();
+    public boolean clickBox(int x, int y){
+        return this.board.getBox(x,y).clickBox();
     }
     
 }

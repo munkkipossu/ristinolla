@@ -19,8 +19,7 @@ import static org.junit.Assert.*;
  */
 public class GameTest {
     
-    public GameTest() {
-    }
+    Game game;
     
     @BeforeClass
     public static void setUpClass() {
@@ -38,6 +37,27 @@ public class GameTest {
     public void tearDown() {
     }
 
+    
     @Test
-    public void hello() {}
+    public void constructorCreatesNamesForPlayers() {
+        game = new Game();
+        String name1 = game.getFirstPlayerName();
+        assertTrue();
+    }
+    
+    @Test
+    public void clickingBoxWorks() {
+        game = new Game();
+        boolean test = game.clickBox(1,1);
+        assertTrue(test);
+    }
+    
+    @Test
+    public void clickingBoxWorksOnlyOnce() {
+        game = new Game();
+        boolean test;
+        game.clickBox(1,1);
+        test = game.clickBox(1,1);
+        assertFalse(test);
+    }
 }

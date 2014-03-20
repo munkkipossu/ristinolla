@@ -20,6 +20,8 @@ import static org.junit.Assert.*;
 public class BoardTest {
     
     Board board;
+    int width;
+    int heigth;
     
     @BeforeClass
     public static void setUpClass() {
@@ -37,9 +39,19 @@ public class BoardTest {
     public void tearDown() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void checkBoardWidth() {
+        width = 5;
+        heigth = 7;
+        board = new Board(width, heigth);
+        assertTrue(board.getWidth()==width);
+    }
+    
+        @Test
+    public void checkBoardHeigth() {
+        width = 5;
+        heigth = 7;
+        board = new Board(width, heigth);
+        assertTrue(board.getHeigth()==heigth);
+    }
 }

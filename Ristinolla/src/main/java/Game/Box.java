@@ -20,12 +20,13 @@ public class Box {
         // initiate symbol to a boring grey box or smth....
     }
 
-    public void clickBox(){
+    public boolean clickBox(){
         if(this.clicked == false){
             this.clicked =true;
             // change symbol to what is given in the method parameters
+            return true;
         }
-        return;
+        return false;
     }
     
 }
