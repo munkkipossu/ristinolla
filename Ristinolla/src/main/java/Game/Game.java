@@ -46,7 +46,7 @@ public class Game {
      * @param name1 name of the first player (the on e that start the game)
      * @param image1 symbol or an image the player uses to identify his choices (traditionally x or o)
      * @param name2 name of the second player
-     * @param image2 symbol of teh second player
+     * @param image2 symbol of the second player
      */
     
     public Game(int width, int heigth, int winCondition, String name1, Image image1, String name2, Image image2){
@@ -69,7 +69,7 @@ public class Game {
     }
     
     public Image clickBox(int x, int y){
-        Image imageHolder = this.activePlayer.getImage()
+        Image imageHolder = this.activePlayer.getImage();
         if(this.board.getBox(x,y).changeImage(imageHolder)){
             if(checkWinCondition()){
                 endGame(activePlayer);

@@ -6,6 +6,7 @@
 
 package Game;
 import java.awt.Image;
+import java.io.*;
 
 /**
  * The board for a tic tac toe game. The size of the board will be an option for the players to choose.
@@ -18,11 +19,11 @@ public class Board {
     private int boardWidth;
     private int boardHeigth;
     
-    public Board(){
+    public Board() throws IOException{
         this(3,3);
     }
     
-    public Board(int x, int y){
+    public Board(int x, int y) throws IOException{
         this.boardWidth = x;
         this.boardHeigth = y;
         this.board = new Box[x][y];
@@ -92,9 +93,9 @@ public class Board {
             for(int j=0; j<boardWidth - numberOfSymbols; j++){
                 for(int k=0; k<numberOfSymbols; k++){
                     if(this.board[i+k][j+k].imageEquals(image) != true){
-                    break;
+                        break;
                     }
-                    if(j==numberOfSymbols-1){
+                    if(k==numberOfSymbols-1){
                         return true;
                     }
                 }

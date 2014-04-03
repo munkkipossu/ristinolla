@@ -12,18 +12,21 @@ package Game;
  * @author tolaakso
  */
 import java.awt.Image;
+import java.io.File;
+import javax.imageio.ImageIO;
+import  java.io.*;
 
 public class Box {
     private boolean clicked;
     private Image image;
     
-    public Box(){
+    public Box() throws IOException {
         this.clicked = false;
-        // initiate symbol to a boring grey box or smth....
+        this.image = ImageIO.read(new File("/cs/fs2/home/tolaakso/Desktop/ristinolla/Ristinolla/src/testiKuva.jpg"));
     }
 
     /**
-     * Method that gives the box an image. This image cannot be changed later.
+     * Method that gives the box an image. This image can be changed only once.
      * 
      * @param image
      */
