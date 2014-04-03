@@ -9,4 +9,4 @@ Valikon toiminnot: pelin avausvalikosta voidaan valita seuraavia asioita:
   
 Pelin toiminnot:
   - Pelaaja valitsee vuorollaan tyhjän ruudun, johon ilmestyy uusi kuva (rasti, ympyrä, kissa tjs)
-
+  - Jokaisen valinnanalkeen peli tarkastaa tilanteen ja paattaa pelin jos voittaja loytyy
