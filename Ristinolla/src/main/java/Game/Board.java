@@ -5,6 +5,7 @@
  */
 
 package Game;
+import java.awt.Image;
 
 /**
  * The board for a tic tac toe game. The size of the board will be an option for the players to choose.
@@ -46,4 +47,60 @@ public class Board {
         return this.boardHeigth;
     }
 
+    /**
+     * 
+     * Method searces the board for adjacent (vertically, horizontally or diagonally) images. If a given number of images is found, returns true.
+     * 
+     * @param numberOfSymbols how many adjacent images we are looking for
+     * @param image the image the method searches for
+     * @return returns true if the required number of symbols are found adjacent to each other.
+     */
+    
+    public boolean successiveSymbols(int numberOfSymbols, Image image){
+        /* This method test if the board contains the required number of adjacent symblos either vertically, horizontally, or diagonally */
+
+        /* Horizontal */
+        for(int i=0; i<boardHeigth; i++){
+            for(int j=0; j<boardWidth-numberOfSymbols; j++){
+                for(int k=0; k<numberOfSymbols; k++){
+                    if(this.board[i][j+k].imageEquals(image) != true){
+                        break;
+                    }
+                    if(k==numberOfSymbols-1){
+                        return true;
+                    }
+                }
+            }
+        }
+        
+        /* Vertical */
+        for(int i=0; i<boardWidth; i++){
+            for(int j=0; j<boardHeigth-numberOfSymbols; j++){
+                for(int k=0; k<numberOfSymbols; k++){
+                    if(this.board[j+k][i].imageEquals(image) != true){
+                        break;
+                    }
+                    if(k==numberOfSymbols-1){
+                        return true;
+                    }
+                }
+            }
+        }
+        
+        /* Diagonally */
+        for(int i=0; i<boardHeigth-numberOfSymbols; i++){
+            for(int j=0; j<boardWidth - numberOfSymbols; j++){
+                for(int k=0; k<numberOfSymbols; k++){
+                    if(this.board[i+k][j+k].imageEquals(image) != true){
+                    break;
+                    }
+                    if(j==numberOfSymbols-1){
+                        return true;
+                    }
+                }
+            }
+        }
+        
+        return false;
+    }
 }

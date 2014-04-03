@@ -12,6 +12,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import java.awt.Image;
+
 
 /**
  *
@@ -41,13 +43,15 @@ public class BoxTest {
     @Test
     public void clickingBoxOnceIsTrue() {
         box = new Box();
-        assertTrue(box.clickBox());
+        Image image  = null;
+        assertTrue(box.changeImage(image));
     }
     
     @Test
     public void clickingBoxTwicIsFalse() {
         box = new Box();
-        box.clickBox();
-        assertFalse(box.clickBox());
+        Image image = null;
+        box.changeImage(image);
+        assertFalse(box.changeImage(image));
     }
 }

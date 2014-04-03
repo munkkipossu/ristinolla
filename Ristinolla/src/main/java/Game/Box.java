@@ -11,22 +11,35 @@ package Game;
  *
  * @author tolaakso
  */
+import java.awt.Image;
+
 public class Box {
     private boolean clicked;
-    //private symbol xxx;
+    private Image image;
     
     public Box(){
         this.clicked = false;
         // initiate symbol to a boring grey box or smth....
     }
 
-    public boolean clickBox(){
+    /**
+     * Method that gives the box an image. This image cannot be changed later.
+     * 
+     * @param image
+     */
+    public boolean changeImage(Image image){
         if(this.clicked == false){
             this.clicked = true;
-            // change symbol to what is given in the method parameters
+            this.image = image;
             return true;
         }
         return false;
     }
+    
+    public boolean imageEquals(Image image){
+        return this.image.equals(image);
+    }
+    
+    
     
 }

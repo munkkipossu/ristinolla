@@ -10,21 +10,31 @@ package Game;
  *
  * @author tolaakso
  */
+
+import java.awt.Image;
+
 public class Player {
     
     private String name;
-    //private Symbol symbol;    // Instead of having only x's and o's, we'll have some pictures to choose from
+    private Image image;    // Instead of having only x's and o's, we'll have some pictures to choose from
     
     public Player(){
-        this("Xavier");
+        this("Xavier", null);
     }
     
-    public Player(String name){
+    public Player(String name, Image image){
         this.name = name;        
+        this.image = image;
     }
     
     public String getName(){
         return this.name;
     }
+    
+    public Image getImage(){
+        return this.image;
+    }
+    
+    
     
 }
